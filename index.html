@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts for Migrakshi Website -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&family=Poppins&family=Quicksand&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            background-color: var(--background-color);
+
+            background: #FFF8E1;
+            background-image:
+                radial-gradient(#fff0cc 2px, transparent 2px),
+                radial-gradient(#fff0cc 2px, transparent 2px);
+            background-position: 0 0, 12px 12px;
+            background-size: 24px 24px;
+            image-rendering: pixelated;
+
+        }
+
+        :root {
+            --background-color: #FFF8E1;
+            ;
+            --accent-color: #FF6F91;
+            --text: #3d3d3d;
+            --sec-accent: #FFC75F;
+        }
+
+        .header {
+            position: absolute;
+            top: 120px;
+            right: 260px;
+            width: 50rem;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 3rem;
+            border: 2px solid #d48b04;
+            border-radius: 50px 50px 50px 50px;
+            border-bottom: 4px solid #d48b04;
+            background-color: #ffa600;
+        }
+
+        .header h1 {
+            color: #f32a59;
+            font-family: 'Playfair Display', serif;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #FF6F91;
+            animation: typing 3.5s steps(15, end) infinite, cursor .5s step-end alternate infinite;
+        }
+
+        @keyframes typing {
+            0% {
+                width: 3%;
+            }
+
+            50% {
+                width: 15ch;
+            }
+
+            100% {
+                width: 3%;
+            }
+        }
+
+        @keyframes cursor {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .header p {
+            color: var(--text);
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        #intro {
+            position: absolute;
+            top: 350px;
+            left: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding-right: 30px;
+            border-right: 3px solid #ffa600;
+            border-radius: 0px 50px 50px 0px;
+            background-color: pink;
+        }
+
+        #intro h2 {
+            color: var(--accent-color);
+            font-family: 'Playfair Display', serif;
+            line-height: 3rem;
+        }
+
+        #intro p {
+            color: var(--text);
+            font-family: 'Quicksand', sans-serif;
+            line-height: 25px;
+        }
+
+        #intro strong {
+            color: #b17900;
+        }
+
+        #intro span {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        #cooking {
+            position: absolute;
+            top: 600px;
+            right: 0;
+            border-left: 3px solid rgb(255, 154, 171);
+            border-radius: 50px 0 0 50px;
+            padding-left: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #cooking h2 {
+            color: var(--accent-color);
+            font-family: 'Playfair Display', serif;
+            line-height: 3rem;
+        }
+
+        #cooking p {
+            color: var(--text);
+            font-family: 'Quicksand', sans-serif;
+            line-height: 25px;
+        }
+
+        #cooking span {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        #study {
+            position: absolute;
+            top: 850px;
+            left: 10px;
+            border-right: 3px solid #ffa600;
+            border-radius: 0px 50px 50px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            background-color: pink;
+        }
+
+        #study span {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        #study h2 {
+            color: var(--accent-color);
+            font-family: 'Playfair Display', serif;
+            line-height: 3rem;
+        }
+
+        #study p {
+            color: var(--text);
+            font-family: 'Quicksand', sans-serif;
+            line-height: 25px;
+        }
+
+        #study blockquote {
+            color: #b17900;
+        }
+
+        #flirty {
+            position: absolute;
+            top: 1040px;
+            right: 0;
+            border-left: 3px solid rgb(255, 154, 171);
+            border-radius: 50px 0 0 50px;
+            padding-left: 35px;
+            padding-right: 10px;
+            display: flex;
+            justify-content: start;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+        }
+
+        #flirty h2 {
+            color: var(--accent-color);
+            font-family: 'Playfair Display', serif;
+            line-height: 3rem;
+        }
+
+        #flirty p {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        #flirty span {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .music {
+            display: grid;
+            justify-content: space-evenly;
+            align-items: center;
+            grid-template-columns: auto auto;
+            position: relative;
+            top: 1400px;
+            left: 150px;
+            background-color: #ffa600;
+            border: 2px solid #d48b04;
+            box-shadow: 2px 2px 5px #d48b04;
+            border-radius: 30px 30px 30px 30px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            width: 1000px;
+        }
+
+        .music h2 {
+            color: #3d3d3d;
+            font-family: 'Playfair Display', serif;
+            line-height: 3rem;
+        }
+
+        .music p {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .music1 {
+            background-color: #FF6F91;
+            border: 2px solid #FF6F91;
+            padding: 10px;
+            box-shadow: 2px 2px 10px #e4355e;
+            border-radius: 30px 30px 30px 30px;
+        }
+
+        .music2 {
+            background-color: #FF6F91;
+            border: 2px solid #FF6F91;
+            padding: 10px;
+            box-shadow: 2px 2px 10px #e4355e;
+            border-radius: 30px 30px 30px 30px;
+        }
+
+        #footer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: relative;
+            flex-direction: column;
+            padding-left: 30px;
+            top: 1550px;
+            width: 900px;
+            left: 15%;
+            border: 2px solid #d48b04;
+            border-radius: 50px 50px 50px 50px;
+            border-bottom: 4px solid #d48b04;
+            background-color: #ffa600;
+        }
+
+        #footer h2 {
+            color: #f32a59;
+            font-family: 'Playfair Display', serif;
+            line-height: 3rem;
+            padding-bottom: 10px;
+        }
+
+        #footer p {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .button-section {
+            text-align: center;
+            margin-top: 40px;
+            position: absolute;
+            top: 2100px;
+            right: 400px;
+            padding-bottom: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: normal;
+        }
+
+        .button-section button {
+            background-color: #FF6F91;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            border: none;
+            padding: 12px 20px;
+            margin: 10px;
+            font-size: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+        }
+
+        .button-section button:hover {
+            background-color: #ff4d6d;
+        }
+
+
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .pixel-heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            transform: rotate(45deg);
+            animation: float 8s linear infinite;
+            image-rendering: pixelated;
+            opacity: 0.7;
+        }
+
+        .pixel-heart::before,
+        .pixel-heart::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .pixel-heart::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .pixel-heart::after {
+            left: -10px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(45deg);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-10vh) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        /*For iPhone SE*/
+        @media (min-width: 320px) and (max-width: 375px) {
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+
+            .header {
+                position: absolute;
+                right: 5px;
+                width: 330px;
+                padding: 15px;
+                line-height: 25px;
+            }
+
+            #intro {
+                width: 85%;
+            }
+
+            #cooking {
+                top: 750px;
+                width: 85%;
+            }
+
+            #study {
+                top: 1090px;
+                width: 85%;
+            }
+
+            #flirty {
+                top: 1450px;
+                width: 80%;
+            }
+
+            #footer {
+                top: 1800px;
+                position: absolute;
+                width: 230px;
+                padding-right: 10px;
+            }
+
+            .button-section {
+                text-align: center;
+                margin-top: 40px;
+                position: relative;
+                top: 2350px;
+                padding-bottom: 100px;
+                left: 0px;
+            }
+
+            .music {
+                top: 1800px;
+                display: grid;
+                justify-content: space-evenly;
+                align-items: center;
+                grid-template-columns: auto;
+                position: absolute;
+                width: 350px;
+                left: 0.5rem;
+            }
+
+            .music1 {
+                margin-top: -11px;
+                margin-bottom: 20px;
+            }
+
+            #footer {
+                top: 2200px;
+            }
+
+            .button-section {
+                top: 2700px;
+            }
+        }
+
+        /*For Galaxy A16*/
+        @media (min-width: 376px) and (max-width: 430px) {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .header {
+                position: relative;
+                left: 25px;
+                width: 330px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            #intro {
+                width: 85%;
+            }
+
+            #cooking {
+                top: 750px;
+                width: 85%;
+            }
+
+            #study {
+                top: 1090px;
+                width: 85%;
+            }
+
+            .music {
+                top: 1800px;
+                display: grid;
+                justify-content: space-evenly;
+                align-items: center;
+                grid-template-columns: auto;
+                position: absolute;
+                width: 350px;
+                left: 2rem;
+            }
+
+            .music1 {
+                margin-top: -11px;
+                margin-bottom: 20px;
+            }
+
+            #flirty {
+                top: 1450px;
+                width: 80%;
+            }
+
+            #footer {
+                top: 2200px;
+                position: absolute;
+                width: 230px;
+            }
+
+            .button-section {
+                text-align: center;
+                margin-top: 40px;
+                position: relative;
+                top: 2600px;
+                padding-bottom: 100px;
+                left: 0px;
+            }
+
+            .button-section button {
+                background-color: #FF6F91;
+                color: white;
+                font-family: 'Poppins', sans-serif;
+                border: none;
+                padding: 12px 20px;
+                margin: 10px;
+                font-size: 1rem;
+                border-radius: 10px;
+                cursor: pointer;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: background 0.3s ease;
+            }
+        }
+
+        /*For 16:9 laptops*/
+        @media (aspect-ratio:16/9){
+            .header{
+                left:380px;
+            }
+
+            .music{
+                left: 270px;
+            }
+
+            #footer{
+                left: 300px;
+            }
+        }
+    </style>
+    <title>Madam jii</title>
+</head>
+
+<body>
+    <section class="header">
+        <h1>🌼 Hey Mrigakshi!</h1>
+        <p>Welcome to your exclusive fan club (established by me 😎)</p>
+    </section>
+
+    <section id="intro">
+        <h2>💬 Just a Little Something...</h2>
+        <p>So... there’s this girl named <strong>Mrigakshi</strong> — she cooks like a MasterChef ig, studies like
+            she’s<br>
+            solving world problems (topper), and don't giving me gali for flirting like playing a sport.<br> Guess what?
+            She also talks to this charming boy
+            (me
+            🙋‍♂️) and sometimes I feel like she<br> kinda likes him? 😉</p>
+        <p>This site is my way of saying: <span>You're amazing... and also mildly dangerous to my peace of mind
+                💘</span></p>
+    </section>
+
+    <section id="cooking">
+        <h2>🍕 Masterchef Migrakshi</h2>
+        <p>Let’s talk about food, <span>baby! You cook with the grace of a royal chef and the spice of a Netflix drama
+                🌶️ but
+                alxii ig????.</span>
+        </p>
+        <ul>
+            <li>Chopped onions? ✅ Tear-free magic</li>
+            <li>Masala levels? ✅ Just the right drama</li>
+            <li>Plating skills? ✅ Instagram-worthy since birth</li>
+        </ul>
+        <p>If I ever go missing, check your kitchen. I probably fainted from your masuu ko aroma 🍚💀</p>
+    </section>
+
+    <section id="study">
+        <h2>📖 Study Slayer Mode</h2>
+        <p><span>They say beauty and brains rarely mix. You’re the plot twist.</span>🤓💅</p>
+        <p>Whether it's solving equations or mastering a new subject, you make<br> studying look... weirdly hot. (How do
+            you
+            even do that?)</p>
+        <blockquote>“Do not disturb. Migrakshi is currently leveling up her brain stats.”</blockquote>
+        <p>Meanwhile, I’m still stuck at: 1 + You = Happiness 💗 jpt </p>
+    </section>
+
+    <section id="flirty">
+        <h2>😏 Flirt Mode: ON</h2>
+        <p><span>I thought I was good at flirting... until you walked in and casually destroyed<br> my confidence with a
+                wink 😳</span>
+        </p><br>
+        <p>You flirt like it’s your side hustle. And I fall for it every. single. time.</p><br>
+        <p>Me: “Let’s be friends.”</p><br>
+        <p>You: *sends 3 emojis and giggles*</p><br>
+        <p>Also me: “Okay I’ll name our kids.”</p>
+    </section>
+
+    <div class="music">
+        <div class="music1">
+            <h2>Pahilo prayash</h2>
+            <p>Timi Nai Ta Mero Pahilo Maya Hau Ni,<br>Ma Ta Aba Timi Sangai Maya Laauni</p>
+        </div>
+        <div class="music2">
+            <h2>Dosro prayash</h2>
+            <p>Mriga Nayani Le<br>Maana Ma Mohani Layo<br>Raat Ko Nidari<br>Din Ma Hossai Udayo</p>
+        </div>
+    </div>
+
+    <section id="footer">
+        <h2>💌 A Tiny Love Note</h2>
+        <p>Dear Mrigakshi,</p><br>
+        <p>This is just a silly little website — but it’s got pieces of what I feel for you in every section.</p>
+        <p>You make life more fun, conversations more exciting, and flirting dangerously addictive.</p>
+        <p>Whether we end up sharing notes or Netflix accounts (👀), I just want you to know — you’re<br> incredible.
+            And
+            you’re definitely someone worth building websites for 💻❤️</p><br>
+        <p style="text-align:center; font-style:italic;">— From the guy who really hopes you smile reading this 💫</p>
+    </section>
+
+    <div class="button-section">
+        <h2>Will you allow me to add more things here ❤️ for lifetime??</h2>
+        <button id="yesBtn">Yes</button>
+        <button id="NoBtn">No</button>
+
+    </div>
+
+
+    <div class="hearts-container" id="hearts-container"></div>
+
+    <script>
+
+        document.getElementById("yesBtn").addEventListener("click", () => {
+            alert("I love you 😍");
+            console.log("Migrakshi loved it!");
+        });
+
+        document.getElementById("NoBtn").addEventListener("click", () => {
+            alert("Fir se soch lo...😍");
+            console.log("She thinks you're cute 😏");
+        });
+
+        const container = document.getElementById('hearts-container');
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('pixel-heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+            heart.style.opacity = Math.random();
+            heart.style.transform = `scale(${Math.random() * 1.5 + 0.5}) rotate(45deg)`;
+            container.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
+
+        setInterval(createHeart, 300);
+
+
+    </script>
+</body>
+
+</html>
